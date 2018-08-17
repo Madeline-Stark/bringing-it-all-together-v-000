@@ -17,18 +17,18 @@ def self.create_table
         SQL
     DB[:conn].execute(sql)
 end
-#
-# def self.drop_table
-#   sql = <<-SQL
-#     DROP TABLE dogs
-#       SQL
-#   DB[:conn].execute(sql)
-# end
-#
-# def self.new_from_db(row)
-#     new_dog = self.new(id: row[0], name: row[1], breed: row[2])
-#     new_dog
-# end
+
+def self.drop_table
+  sql = <<-SQL
+    DROP TABLE dogs
+      SQL
+  DB[:conn].execute(sql)
+end
+
+def self.new_from_db(row)
+    new_dog = self.new(id: row[0], name: row[1], breed: row[2])
+    new_dog
+end
 #
 # def self.find_by_name(name)
 #     sql = <<-SQL
